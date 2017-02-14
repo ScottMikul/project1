@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Jar{
   private String itemName;
   private int maxItems;
@@ -7,7 +9,8 @@ public class Jar{
     this.maxItems = maxItems;
   }
   public void fill(){
-     count = (int)(Math.random()*(maxItems))+1;
+    Random random = new Random();
+    count = random.nextInt(maxItems)+1;
   }
   public int getCount(){
     return count; 
